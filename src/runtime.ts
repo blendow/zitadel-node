@@ -42,6 +42,9 @@ export class BaseAPI {
     if (response && response.status >= 200 && response.status < 300) {
       return response;
     }
+
+    const responseData = await response?.json();
+
     throw new ApiException(
       'Response returned an error code',
       response.status,
@@ -51,7 +54,7 @@ export class BaseAPI {
           Array.isArray(v) ? v : [v],
         ]),
       ),
-      response?.body?.toString(),
+      responseData as string | Record<string, unknown> | null | undefined,
     );
   }
 
