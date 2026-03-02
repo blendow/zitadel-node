@@ -1,6 +1,6 @@
 {
-  "name": "@zitadel/zitadel-node",
-  "version": "4.1.0-beta.10",
+  "name": "@zitadel/sdk",
+  "version": "4.1.0-beta.13",
   "type": "module",
   "scripts": {
     "prepack": "tsc",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "@codedependant/semantic-release-docker": "^5.1.1",
     "@commitlint/config-conventional": "^20.0.0",
-    "@mridang/eslint-defaults": "^1.4.0",
+    "@mridang/eslint-defaults": "^1.6.1",
     "@mridang/semantic-release-peer-version": "^1.2.0",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/exec": "^7.1.0",
@@ -75,7 +75,7 @@
     "typescript": "^5.9.3"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "dependencies": {
     "@jest/globals": "^30.2.0",
